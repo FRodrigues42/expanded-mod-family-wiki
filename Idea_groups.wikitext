@@ -1,0 +1,961 @@
+{{featured}}
+{{Version|1.30}}
+[[File:UI tab ideas.png|right|framed|[[Country_interface#Ideas|Ideas interface]]]]
+:{{Hatnote|For the ideas of individual countries, see [[national ideas]].}}
+:{{Hatnote|For the ideas of American natives, see [[native ideas]].}}
+
+As a nation develops [[technology|technologically]], it unlocks the ability to gain additional ''idea groups''. Investing into a full idea group can take a long time and cost several decades worth of power. The act of choosing at any point of time a certain idea group over the other and advancing in it represent the time and focus nations choose to spend historically along certain administrative, diplomatic, and military specializations. 
+
+== Mechanics summary ==
+{{SVersion|1.31}}
+Each nation can have up to 8 idea groups from a pool of 19 groups (only 18 are shown as the Aristocratic and Plutocratic idea groups are locked behind exclusive government reforms). Idea group choice is only restricted by the requirement for a balanced mix of groups: No more than half of a nation's chosen idea groups, whether completed or not, can have the same associated type of {{icon|all power costs}} monarch power.<ref>See in {{path|defines}}: MAX_IDEA_GROUPS_FROM_SAME_CATEGORY = 0.5,</ref> This limit can be turned off in [[options]] before starting a game without disabling achievements.
+
+Idea group choices are unrestricted, with several exceptions: [[#Plutocratic|Plutocratic ideas]] are enabled for most [[republics]] but disabled for most other government types; [[#Aristocratic|Aristocratic ideas]] are disabled for most [[republics]] but enabled for most other government types; [[#Divine|Divine ideas]] are enabled only for [[theocracies]]; [[#Horde Government|Horde Government ideas]] are enabled only for  [[steppe nomads]]; [[#Indigenous|Indigenous ideas]] are enabled only for [[native tribe]]s and [[#Maritime|Maritime]] and [[#Naval|Naval ideas]] are disabled for [[primitives]]. However, AI nations have [[Idea_groups#AI_preference|weights]] assigned to the idea groups to make their choices random but still somewhat historical.
+
+Each idea group consists of 7 ideas. Advancing within an idea group is done sequentially and each unlocked idea enhances a particular aspect of the nation. Unlocking the last idea in the group also unlocks the group's bonus.
+
+=== Unlocking new slots ===
+New idea group slots are unlocked with the advancement in {{icon|adm tech}} Administrative technology as described below:
+
+{| class="mildtable" style="text-align:left"
+! {{icon|adm tech}} Administrative tech level
+! 5 !! 7 !! 10 !! 14 !! 18 !! 22 !! 26 !! 29
+|-
+! {{icon|idea unlock}} Number of idea groups
+|| {{green|1}} || {{green|2}} || {{green|3}} || {{green|4}} || {{green|5}} || {{green|6}} || {{green|7}} || {{green|8}}
+|-
+! {{icon|time}} Year in which the technology loses its ahead of time penalty
+|| 1453 || 1479 || 1518 || 1570 || 1622 || 1674 || 1730 || 1775
+|}
+
+=== Abandoning idea groups ===
+{{expansion|aow}}
+Abandoning an idea group can be used to free up an idea slot if it no longer serves the nation and there may be others more suitable groups that do so. It is important to note, however, that doing so will result in losing all the given bonuses from said idea group and will only refund 10% of the {{icon|all power costs}} monarch power points invested in the group<ref>See in {{path|defines}}: ABANDON_IDEAGROUP_REFUND = 0.10, ''-- The part of the idea group spent that will be refunded upon abandonment.''</ref>. Discarding idea groups will also impact the number of Ideas a nation has towards unlocking [[National Ideas]] and Ambitions.
+
+Due to the low refund rate and the importance of monarch power points, picking an idea group should be done with its future usefulness to the nation in mind. However, this option should not be disregarded either as it is extremely useful in the right circumstances. For example: 
+* Primitives can take only the first 3-4 Exploration ideas, get a colonial border with a western power, then drop Exploration for something else. Some would benefit more from the Expansion idea group; but Expansion doesn't allow Explorers or long-range island-hopping. They could even opt out of colonization altogether after getting the border they needed.
+
+=== Technology cost reduction ===
+Each unlocked idea grants a {{icon|tech cost}} {{green|−2%}} Technology cost reduction. The reduction can result in up to {{green|−14%}} for a fully unlocked idea group (without accounting for further reductions that may be applied from the ideas themselves). The type of the reduction depends on the affiliation of the idea group; for example, the {{icon|Espionage}} Espionage idea group grants {{icon|dip tech cost}} Diplomatic tech cost reduction.
+
+=== Innovativeness gain ===
+Being the first nation to unlock an idea or unlocking an idea within 90 days after it is first unlocked gives a nation a base of {{green|+2}}[[file:Innovativeness.png|24px]] [[innovativeness]].
+
+=== Policies ===
+{{main|Policies}}
+Policies become enabled when a pair of 2 idea groups are fully unlocked. Picking a {{icon|policy}} policy provides a bonus to the nation at the monthly cost of 1 monarch power per policy (type of monarch power used depends on policy affiliation) if the limit is overwhelmed (base: 1 policy of each type can be picked for free) . Once picked, a policy cannot be canceled for a duration of {{icon|time}} 10 years. There is no restriction on policy composition and a nation can activate up to 9 policies at a time, 3 per type.
+
+== Idea cost ==
+{{SVersion|1.30}}
+Unlocking an idea has a base [[File:Idea cost.png|24px]] idea cost of {{icon|all power costs}} {{red|400}} monarch power<ref>See in {{path|common/defines.lua}}: PS_BUY_IDEA = 400</ref> (the type of power depending on the idea group).
+
+The base [[File:Idea cost.png|24px]] idea cost is modified by the following:
+
+{| class="mildtable plainlist"
+! style="width:30px" | [[File:Idea cost.png|24px]]
+! Conditions
+|-
+| align=right | {{green|−25%}} || for the AI at very hard [[difficulty]]
+|-
+| align=right | {{green|−10%}} ||
+*as {{icon|theocracy|24px}} theocracy that has enacted “[[Partial Secularisation]]” government reform
+*as {{icon|tengri|24px}}Tengri with {{icon|protestant|24px}}Protestant or {{icon|Anglican|24px}}Anglican as secondary faith
+*as {{icon|shinto|24px}}Shinto with “Selective Integration” [[isolationism]] level
+|-
+| align=right | {{green|−7%}} || as {{icon|Confucian|24px}}Confucian country harmonized with {{icon|Mahayana|24px}}Mahayana
+|-
+| align=right | {{green|−5%}} ||
+*with a [[ruler]] which has the {{icon|free thinker|24px}} ‘Free Thinker’ {{DLC-only|personality}}
+*with ‘[[Mughal Diwan]]’ government with assimilation bonus for the Korean culture
+*as {{icon|Mahayana|24px}}Mahayana country
+*as {{icon|protestant|24px}}Protestant country with “Individual creeds” aspect 
+|-
+| align=right | {{red|+0.2%}} || as {{icon|nahuatl|24px}} Nahuatl countries for each point of [[doom]]
+|-
+| align=right | {{red|+20%}} ||
+* during the [[Dominance of the Clergy]] {{icon|disaster|24px}} disaster
+* during the [[Dominance of the Brahmins]] {{icon|disaster|24px}} disaster
+|-
+| align=right | {{red|+25%}} || during the [[Janissary Decadence]] {{icon|disaster|24px}} disaster
+|-
+| align=right | {{red|+50%}} ||
+*if [[bankrupt]]
+*during the [[Dominance of the Tribes]] {{icon|disaster|24px}} disaster
+|}
+
+Ideas and policies:
+{{bonus table|idea cost|collapse=yes}}
+
+Several missions, decisions and events grant modifiers that affect idea cost.
+
+== National ideas ==
+{{SVersion|Timeless}}
+{{Main|National ideas}}
+Every country has seven national ideas. These ideas do not cost any [[monarch points]] but instead are unlocked; one national idea is unlocked for every third idea bought normally from an idea group.
+
+Many nations have unique national ideas while a large number of others have national ideas based upon a common geographic region or a shared culture. The rest of the nations, who lack unique NIs or don't share a common NI group, draw their national ideas from a common generic set of ideas. 
+
+;National tradition
+:Every nation also starts with a national tradition: two abilities which define the history and heritage of the country. 
+
+;National ambition
+:Countries also have a “national ambition”, which is a bonus that is unlocked when a nation has gained all seven of its national ideas. This bonus is also unique for each country.
+
+== [[File:Icon powers administrative.png]] Administrative groups ==
+{{SVersion|1.32}}
+Administrative power is required to unlock ideas within these groups.
+{{box wrapper|align-items=stretch|
+{{idea group
+|version=1.32
+|name=Administrative
+|idea1=Organized Mercenary Payments
+|idea1effect={{green|−10%|b}} Mercenary cost
+|idea1icon=Mercenary cost
+|idea2=Adaptability
+|idea2effect={{green|−25%|b}} Core-creation cost
+|idea2icon=Core creation
+|idea3=Benefits for Mercenaries
+|idea3effect={{green|−15%|b}} Mercenary maintenance
+|idea3icon=Mercenary maintenance
+|idea4=Bookkeeping
+|idea4effect={{green|−0.5|b}} Interest per annum
+|idea4icon=Interest
+|idea5=Mercenary Recruitment
+|idea5effect={{green|+25%|b}} Mercenary manpower
+|idea5icon=Mercenary manpower
+|idea6=Administrative Efficiency
+|idea6effect={{green|+1|b}} Possible advisor
+|idea6icon=Possible advisors
+|idea7=Civil Service
+|idea7effect={{green|−10%|b}} Administrative technology cost
+|idea7icon=Adm tech cost modifier
+|bonus={{green|+25%|b}} Governing capacity modifier
+|events=[[Administrative idea group events]]
+}}
+
+{{idea group
+|version=1.32
+|name=Economic
+|idea1=Bureaucracy
+|idea1effect={{green|+10%|b}} National tax modifier
+|idea1icon=National tax modifier
+|idea2=Organized Construction
+|idea2effect={{green|−10%|b}} Construction cost
+|idea2icon=Construction cost
+|idea3=National Bank
+|idea3effect={{green|+0.10|b}} Yearly inflation reduction
+|idea3icon=Inflation reduction
+|idea4=Debt and Loans
+|idea4effect={{green|−0.5|b}} Interest per annum
+|idea4icon=Interest
+|idea5=Centralization
+|idea5effect={{green|−0.05|b}} Monthly autonomy change
+|idea5icon=autonomy
+|idea6=Nationalistic Enthusiasm
+|idea6effect={{green|−5%|b}} Land maintenance modifier
+|idea6icon=Land maintenance modifier
+|idea7=Smithian Economics
+|idea7effect={{green|+10%|b}} Production efficiency
+|idea7icon=Production efficiency
+|bonus={{green|−20%|b}} Development cost
+|events=[[Economic idea group events]]
+}}
+
+{{idea group
+|version=1.32
+|name=Expansion
+|idea1=Additional Colonists
+|idea1effect={{green|+1|b}} Colonist
+|idea1icon=Colonists
+|idea2=Additional Merchants
+|idea2effect={{green|+1|b}} Merchant
+|idea2icon=Merchants
+|idea3=Faster Colonists
+|idea3effect={{green|+20|b}} Global settler increase
+|idea3icon=Global settler increase
+|idea4=Factories
+|idea4effect={{green|−50%|b}} Fort maintenance on border with rival
+:{{DLC-only|Center of trade upgrade cost|−20|b}}
+|idea4icon=Fort maintenance on border with rival
+|idea5=Additional Diplomats
+|idea5effect={{green|+1|b}} Diplomatic relation
+|idea5icon=Diplomatic relations
+|idea6=General Colonization Law
+|idea6effect={{green|+1|b}} Colonist
+:{{green|+5%|b}} Settler chance
+|idea6icon=Colonists
+|idea7=Competitive Merchants
+|idea7effect={{green|+20%|b}} Global trade power
+|idea7icon=Global trade power
+|bonus={{green|−10%|b}} Minimum autonomy in territories
+|events=[[Expansion idea group events]]
+}}
+
+{{idea group
+|version=1.32
+|name=Humanist
+|idea1=Tolerance
+|idea1effect={{green|+25%|b}} Religious unity
+|idea1icon=religious unity
+|idea2=Local Traditions
+|idea2effect={{green|−2|b}} National unrest
+|idea2icon=National unrest
+|idea3=Ecumenism
+|idea3effect={{green|+2|b}} Tolerance of heretics
+|idea3icon=Tolerance heretic
+|idea4=Indirect Rule
+|idea4effect={{green|−10|b}} Years of separatism
+|idea4icon=years of nationalism
+|idea5=Cultural Ties
+|idea5effect={{green|+2|b}} Max promoted cultures
+|idea5icon=max promoted cultures
+|idea6=Benevolence
+|idea6effect={{green|+30%|b}} Improve relations
+|idea6icon=Improve relations
+|idea7=Humanist Tolerance
+|idea7effect={{green|+2|b}} Tolerance of heathens
+|idea7icon=tolerance heathen
+|bonus={{green|−10%|b}} Idea cost
+:{{green|+0.25|b}} {{DLC-only|Yearly harmony increase}}
+:{{green|+10%|b}} Brahmins loyalty equilibrium
+:{{green|+10%|b}} Dhimmi loyalty equilibrium
+|events=[[Humanist idea group events]]
+}}
+
+{{idea group
+|version=1.32
+|name=Innovative
+|idea1=Patron of the Arts
+|idea1effect={{green|−1%|b}} Prestige decay 
+|idea1icon=Prestige decay
+|idea2=Empiricism
+|idea2effect={{DLC-only|Innovativeness gain|+50|b}}
+|idea2icon=Innovativeness gain
+|idea3=Scientific Revolution
+|idea3effect={{green|−10%|b}} Technology cost
+:{{green|−10%|b}} Institution embracement cost
+|idea3icon=Technology cost
+|idea4=Dynamic Court
+|idea4effect={{green|+1|b}} Possible advisor
+|idea4icon=Possible advisors
+|idea5=Print Culture
+|idea5effect={{green|+25%|b}} Institution spread
+|idea5icon=Institution spread
+|idea6=Optimism
+|idea6effect={{green|−0.05|b}} Monthly war exhaustion
+|idea6icon=War exhaustion
+|idea7=Formalized Officer Corps
+|idea7effect={{green|+1|b}} Leader without upkeep
+|idea7icon=Leader(s) without upkeep
+|bonus={{green|−25%|b}} Advisor costs 
+|events=[[Innovative idea group events]]
+}}
+
+{{idea group
+|version=1.32
+|name=Religious
+|idea1=Missionary Schools
+|idea1effect={{green|+1|b}} Missionary
+|idea1icon=Missionaries
+|idea2=Church Attendance Duty
+|idea2effect={{green|−25%|b}} Stability cost modifier
+|idea2icon=Stability cost modifier
+|idea3=Divine Supremacy
+|idea3effect={{green|+3%|b}} Missionary strength
+|idea3icon=Missionary strength
+|idea4=Devoutness
+|idea4effect={{green|+2|b}} Tolerance of the true faith
+:{{green|+2|b}} Yearly papal influence
+:{{green|+0.25|b}} {{DLC-only|Monthly fervor}}
+:{{green|+0.5|b}} {{DLC-only|Yearly devotion}}
+:{{green|+10%|b}} {{DLC-only|Church power}}
+|idea4icon=Tolerance own
+|idea5=Religious Tradition
+|idea5effect={{green|+1|b}} Yearly prestige 
+|idea5icon=Prestige
+|idea6=Inquisition
+|idea6effect={{green|−50%|b}} Missionary maintenance cost
+|idea6icon=Missionary maintenance cost
+|idea7=Deus Vult
+|idea7effect=Permanent casus belli against neighboring heathens and heretics
+|idea7icon=Cb on religious enemies
+|bonus={{green|−25%|b}} Culture conversion cost
+:{{green|+10%|b}} Brahmins loyalty equilibrium
+:{{green|+10%|b}} Clergy loyalty equilibrium
+|events=[[Religious idea group events]]
+}}
+}}<!-- end box wrapper -->
+
+== [[File:Icon powers diplomatic.png]] Diplomatic groups ==
+{{SVersion|1.32}}
+Diplomatic power is required to unlock ideas within these groups.
+<div style="display:flex;flex-wrap:wrap;align-items:stretch;"><!-- begin box wrapper -->{{idea group
+|version=1.32
+|name=Diplomatic
+|idea1=Foreign Embassies
+|idea1effect={{green|+1|b}} Diplomat
+|idea1icon=Diplomats
+|idea2=Cabinet
+|idea2effect={{green|+1|b}} Diplomatic relation
+|idea2icon=Diplomatic relations
+|idea3=Grand Banquets
+|idea3effect={{green|+1|b}} Diplomat
+|idea3icon=Diplomats
+|idea4=Benign Diplomats
+|idea4effect={{green|+25%|b}} Improve relations
+|idea4icon=improve relation modifier
+|idea5=Experienced Diplomats
+|idea5effect={{green|+2|b}} Diplomatic reputation
+|idea5icon=Diplomatic reputation
+|idea6=Flexible Negotiations
+|idea6effect={{green|−20%|b}} Province warscore cost
+|idea6icon=Province warscore cost
+|idea7=Diplomatic Corps
+|idea7effect={{green|−10%|b}} Diplomatic technology cost
+|idea7icon=dip tech cost modifier
+|bonus=Lowered impact on stability from diplomatic actions
+|events=[[Diplomatic idea group events]]
+}}
+
+<section begin=Espionage />{{idea group
+|version=1.32
+|name=Espionage
+|idea1=Efficient Spies
+|idea1effect={{green|+50%|b}} Spy network construction
+:{{green|−10%|b}} Advisor costs
+|idea1icon=spy network construction
+|idea2=Agent Training
+|idea2effect={{green|+1|b}} Diplomat
+|idea2icon=Diplomats
+|idea3=Vetting
+|idea3effect={{green|+33%|b}} Foreign spy detection
+|idea3icon=Foreign spy detection
+|idea4=State Propaganda
+|idea4effect={{green|−20%|b}} Aggressive expansion impact
+|idea4icon=ae impact
+|idea5=Claim Fabrication
+|idea5effect=May fabricate claims for subjects
+:{{green|−25%|b}} Cost to fabricate claims
+|idea5icon=May fabricate claims for subjects
+|idea6=Privateers
+|idea6effect={{green|+25%|b}} Embargo efficiency
+:{{green|+33%|b}} {{DLC-only|Privateer efficiency}}
+|idea6icon=Embargo efficiency
+|idea7=Audit Checks
+|idea7effect={{green|−0.10|b}} Yearly corruption
+|idea7icon=yearly corruption
+|bonus={{green|+50%|b}} Rebel support efficiency
+|events=[[Espionage idea group events]]
+}}<section end=Espionage />
+
+{{idea group
+|version=1.32
+|name=Exploration
+|idea1=Quest for the New World
+|idea1effect=Allows recruitment of explorers & conquistadors
+|idea1icon=May explore
+|idea2=Colonial Ventures
+|idea2effect={{green|+1|b}} Colonist
+|idea2icon=Colonists
+|idea3=Overseas Exploration
+|idea3effect={{green|+50%|b}} Colonial range
+|idea3icon=Range
+|idea4=Land of Opportunity
+|idea4effect={{green|+10|b}} Global settler increase
+|idea4icon=Global settler increase
+|idea5=Viceroys
+|idea5effect={{green|+10%|b}} Global tariffs
+:{{green|−20%|b}} Envoy travel time
+|idea5icon=Global tariffs
+|idea6=Free Colonies
+|idea6effect={{DLC-only|Expel minorities cost|−100|b}}
+|idea6icon=Expel minorities cost
+|idea7=Global Empire
+|idea7effect={{green|+25%|b}} Naval force limit modifier
+|idea7icon=Naval force limit modifier
+|bonus=Can fabricate claim overseas in colonial regions
+|events=[[Exploration idea group events]]
+}}
+
+{{idea group
+|version=1.32
+|name=Influence
+|idea1=Tribute System
+|idea1effect={{green|+25%|b}} Income from vassals
+|idea1icon=vassal income
+|idea2=Additional Loyalist Recruitment
+|idea2effect={{green|−15%|b}} Liberty desire in subjects
+|idea2icon=Liberty desire in subjects
+|idea3=Integrated Elites
+|idea3effect={{green|−25%|b}} Diplomatic annexation cost
+|idea3icon=diplomatic annexation cost
+|idea4=Buffer States
+|idea4effect={{green|+1|b}} Diplomatic relation
+|idea4icon=Diplomatic relations
+|idea5=Diplomatic Influence
+|idea5effect={{green|+2|b}} Diplomatic reputation
+|idea5icon=Diplomatic reputation
+|idea6=Postal Service
+|idea6effect={{green|−25%|b}} Envoy travel time
+|idea6icon=Envoy travel time
+|idea7=Marcher Lords
+|idea7effect={{green|+100%|b}} Vassal force limit contribution
+|idea7icon=vassal forcelimit bonus
+|bonus={{green|−50%|b}} Unjustified demands
+|events=[[Influence idea group events]]
+}}
+
+{{idea group
+|version=1.32
+|name=Maritime
+|notes=Not available for [[primitives]].
+|idea1=Merchant Traditions
+|idea1effect={{green|+100%|b}} Naval tradition from protecting trade
+|idea1icon=Naval tradition from protecting trade
+|idea2=Merchant Marine
+|idea2effect={{green|+50%|b}} National sailors modifier
+|idea2icon=National sailors modifier
+|idea3=Sheltered Ports
+|idea3effect={{green|+10%|b}} Global ship repair
+:{{green|−10%|b}} Sailor maintenance
+|idea3icon=global ship repair
+|idea4=Grand Navy
+|idea4effect={{green|+50%|b}} Naval force limit modifier
+|idea4icon=Naval force limit modifier
+|idea5=Ship's Penny
+|idea5effect={{green|−10%|b}} Ship costs
+|idea5icon=Ship costs
+|idea6=Seahawks
+|idea6effect={{green|+1|b}} Leader without upkeep
+:{{green|−25%|b}} Admiral cost
+|idea6icon=Leader(s) without upkeep
+|idea7=Naval Fighting Instruction
+|idea7effect={{green|+50%|b}} Blockade efficiency
+:{{green|+25%|b}} {{DLC-only|Privateer efficiency}}
+|idea7icon=Blockade efficiency
+|bonus=Ships can repair when in coastal sea zones
+|events=[[Maritime idea group events]]
+}}
+
+{{idea group
+|version=1.32
+|name=Trade
+|idea1=Shrewd Commerce Practice
+|idea1effect={{green|+20%|b}} Global trade power
+|idea1icon=Global trade power
+|idea2=Free Trade
+|idea2effect={{green|+1|b}} Merchant
+|idea2icon=Merchants
+|idea3=Merchant Adventures
+|idea3effect={{green|+25%|b}} Trade range
+|idea3icon=Trade range modifier
+|idea4=National Trade Policy
+|idea4effect={{green|+10%|b}} Trade efficiency
+|idea4icon=Trade efficiency
+|idea5=Overseas Merchants
+|idea5effect={{green|+1|b}} Merchant
+|idea5icon=Merchants
+|idea6=Trade Manipulation
+|idea6effect={{green|+25%|b}} Trade steering
+|idea6icon=Trade steering
+|idea7=Fast Negotiations
+|idea7effect={{green|+25%|b}} {{DLC-only|Caravan power}}
+|idea7icon=Caravan power
+|bonus={{green|+1|b}} Merchant
+|events=[[Trade idea group events]]
+}}
+</div><!-- end box wrapper -->
+* For Exploration note the hidden bonuses when using explorers: each terra incognita sea zone revealed through naval exploration grants {{green|+1}} naval tradition.
+
+== [[File:Icon powers military.png]] Military groups ==
+{{SVersion|1.32}}
+Military power is required to unlock ideas within these groups.
+
+Government-based idea groups:
+{{box wrapper|align-items=stretch|
+{{idea group
+|version=1.32
+|name=Aristocratic
+|notes=Enabled by most [[monarchies]] (except the Plutocracy reform), [[tribes]] (except [[steppe nomads]]), and the Noble Elite [[republic]]an reform.
+|idea1=Noble Knights
+|idea1effect={{green|−10%|b}} Cavalry cost
+:{{green|+10%|b}} Cavalry combat ability
+|idea1icon=Cavalry cost
+|idea2=Military Traditions
+|idea2effect={{green|−10%|b}} Military technology cost
+|idea2icon=Mil tech cost modifier
+|idea3=Local Nobility
+|idea3effect={{green|−0.025|b}} Monthly autonomy change
+:{{green|+0.5|b}} Yearly absolutism
+|idea3icon=autonomy
+|idea4=Serfdom
+|idea4effect={{green|+33%|b}} National manpower modifier
+|idea4icon=National manpower modifier
+|idea5=Noble Officers
+|idea5effect={{green|−1%|b}} Yearly army tradition decay
+:{{green|−1%|b}} Yearly navy tradition decay
+|idea5icon=army tradition decay
+|idea6=International Diplomacy
+|idea6effect={{green|+1|b}} Diplomat
+:{{green|+1|b}} Leader without upkeep
+|idea6icon=Diplomats
+|idea7=Noble Connections
+|idea7effect={{green|+20%|b}} Mercenary manpower
+|idea7icon=Mercenary manpower
+|bonus={{green|+1|b}} Leader siege
+:{{green|+10%|b}} Nobility loyalty equilibrium
+|events=[[Aristocratic idea group events]]
+}}
+
+{{idea group
+|version=1.32
+|name=Divine
+|notes = Only available for [[theocracies]]
+|idea1=Servants of God
+|idea1icon=Yearly devotion
+|idea1effect={{green|+1|b}} {{DLC-only|Yearly devotion}}
+|idea2=By the Grace of God
+|idea2icon=Fire damage received
+|idea2effect={{green|−10%|b}} Fire damage received
+|idea3=Friends in High Places
+|idea3icon=leader cost
+|idea3effect={{green|−20%|b}} Leader cost
+|idea4=Flesh Is Weak
+|idea4icon=Morale of armies
+|idea4effect={{green|+10%|b}} Morale of armies
+|idea5=Alpha and Omega
+|idea5icon=Culture conversion cost
+|idea5effect={{green|−10%|b}} Culture conversion cost
+:{{green|−10%|b}} Cost of enforcing religion through war
+|idea6=Conviction of Sin
+|idea6icon=National unrest
+|idea6effect={{green|−2|b}} National unrest
+|idea7=Martyrs
+|idea7icon=National manpower modifier
+|idea7effect={{green|+15%|b}} National manpower modifier
+|bonus={{green|+1%|b}} Missionary strength vs heretics
+:{{green|+10%|b}} Clergy loyalty equilibrium
+:{{green|+10%|b}} Brahmins loyalty equilibrium
+|events = [[Divine idea group events]]
+}}
+
+{{idea group
+|version=1.32
+|name=Horde Government
+|notes=Enabled only for countries with the [[Steppe Nomads]] government reform
+|idea1=Horse-lords of the Steppes
+|idea1icon=Cavalry cost
+|idea1effect={{green|−33%|b}} Cavalry cost
+|idea2=Beyond the Sun
+|idea2icon=Aggressive expansion impact
+|idea2effect={{green|−10%|b}} Aggressive expansion impact
+|idea3=Mandate of the Khan
+|idea3icon=Religious unity
+|idea3effect={{green|+25%|b}} Religious unity
+|idea4=There Shall Be No Grass
+|idea4icon=Land attrition
+|idea4effect={{green|−20%|b}} Land attrition
+|idea5=Horde Loyalty
+|idea5icon=National unrest
+|idea5effect={{green|−1|b}} National unrest
+|idea6=Watchers of the Silk Road
+|idea6icon=Caravan power
+|idea6effect={{green|+20%|b}} {{DLC-only|Caravan power}}
+|idea7=A Magnanimous Empire
+|idea7icon=Max promoted cultures
+|idea7effect={{green|+2|b}} Max promoted cultures
+|bonus={{green|+25%|b}} Cavalry combat ability
+|events= [[Horde government idea group events]]
+}}
+
+{{idea group
+|version=1.32
+|name=Indigenous
+| events = [[Indigenous idea group events]]
+|idea1=Bountiful Land
+|idea1icon=development cost
+|idea1effect={{green|−5%|b}} Development cost
+:{{green|+0.015|b}} Tribal development growth
+|idea2=Irregular Warfare
+|idea2icon=Attrition for enemies
+|idea2effect={{green|+1|b}} Attrition for enemies
+|idea3=The Great Law
+|idea3icon=monthly reform progress modifier
+|idea3effect={{green|+25%|b}} Monthly reform progress modifier
+|idea4=Braves
+|idea4icon=Morale of armies
+|idea4effect={{green|+10%|b}} Morale of armies
+|idea5=Controlled Burns
+|idea5icon=National manpower modifier
+|idea5effect={{green|+20%|b}} National manpower modifier
+|idea6=Trade with Foreigners
+|idea6icon=Idea cost
+|idea6effect={{green|−10%|b}} Idea cost
+|idea7=Treaties Kept
+|idea7icon=Province war score cost
+|idea7effect={{green|−20%|b}} Province warscore cost
+|bonus={{green|+25%|b}} Institution spread
+| notes = Only available for native tribes
+}}
+
+{{idea group
+|version=1.32
+|name=Plutocratic
+|notes=Enabled by most republics (except the Noble Elite reform) and monarchies with the Plutocracy reform.
+|idea1=Tradition of Payment
+|idea1effect={{green|+10%|b}} Mercenary manpower
+:{{green|+2.5%|b}} Mercenary discipline
+|idea1icon=Mercenary manpower
+|idea2=Abolished Serfdom
+|idea2effect={{green|+10%|b}} Morale of armies
+|idea2icon=Land morale
+|idea3=Bill of Rights
+|idea3effect={{green|−2|b}} National unrest
+|idea3icon=National unrest
+|idea4=Free Merchants
+|idea4effect={{green|+1|b}} Merchant
+|idea4icon=Merchants
+|idea5=Free Subjects
+|idea5effect={{green|+10%|b}} Goods produced modifier
+|idea5icon=goods produced modifier
+|idea6=Free Cities
+|idea6effect={{green|+25%|b}} {{DLC-only|Caravan power}}
+|idea6icon=Caravan power
+|idea7=Emancipation
+|idea7effect={{green|+20%|b}} Manpower recovery speed
+|idea7icon=Manpower recovery speed
+|bonus={{green|+10%|b}} Institution spread
+:{{green|+10%|b}} Burghers loyalty equilibrium
+:{{green|+10%|b}} Vaishyas loyalty equilibrium
+|events=[[Plutocratic idea group events]]
+}}
+}}<!-- end box wrapper -->
+
+
+General military idea groups:
+
+{{box wrapper|align-items=stretch|
+{{idea group
+|version=1.32
+|name=Defensive
+|idea1=Battlefield Commissions
+|idea1effect={{green|+100%|b}} Army tradition from battles
+|idea1icon=Army tradition from battles
+|idea2=Military Drill
+|idea2effect={{green|+15%|b}} Morale of armies
+|idea2icon=Land morale
+|idea3=Improved Maneuver
+|idea3effect={{green|+1|b}} Land leader maneuver
+|idea3icon=Land leader maneuver
+|idea4=Regimental System
+|idea4effect={{green|−5%|b}} Land maintenance modifier
+|idea4icon=Land maintenance modifier
+|idea5=Defensive Mentality
+|idea5effect={{green|−10%|b}} Fort maintenance
+:{{green|+20%|b}} Fort defense
+|idea5icon=Fort maintenance
+|idea6=Supply Trains
+|idea6effect={{green|+33%|b}} Reinforce speed
+|idea6icon=Reinforce speed
+|idea7=Improved Foraging
+|idea7effect={{green|−25%|b}} Land attrition
+|idea7icon=Land attrition
+|bonus={{green|+1|b}} Attrition for enemies
+|events=[[Defensive idea group events]]
+}}
+
+{{idea group
+|version=1.32
+|name=Naval
+|notes=Not available for [[primitives]].
+|idea1=Boarding Parties
+|idea1effect={{green|+1|b}} Naval leader shock
+|idea1icon=Naval leader shock
+|idea2=Improved Rams
+|idea2effect={{green|+25%|b}} Galley combat ability
+|idea2icon=galley power
+|idea3=Naval Cadets
+|idea3effect={{green|+1|b}} Naval leader fire
+:{{green|−33%|b}} Morale hit when losing a ship
+|idea3icon=Naval leader fire
+|idea4=Naval Glory
+|idea4effect={{green|+1|b}} Yearly navy tradition
+|idea4icon=Yearly navy tradition
+|idea5=Press Gangs
+|idea5effect={{green|+25%|b}} Sailor recovery speed
+|idea5icon=Sailor recovery speed
+|idea6=Oak Forests for Ships
+|idea6effect={{green|+20%|b}} Heavy ship combat ability
+|idea6icon=heavy ship power
+|idea7=Superior Seamanship
+|idea7effect={{green|+10%|b}} Morale of navies
+:{{green|+10%|b}} Global naval engagement
+|idea7icon=Naval morale
+|bonus={{green|+10%|b}} Ship durability
+:{{DLC-only|Marines force limit|+10|b}}
+|events=[[Naval idea group events]]
+}}
+
+{{idea group
+|version=1.32
+|name=Offensive
+|idea1=Bayonet Leaders
+|idea1effect={{green|+1|b}} Land leader shock
+|idea1icon=Leader shock
+|idea2=National Conscripts
+|idea2effect={{green|−10%|b}} Recruitment time
+|idea2icon=Recruitment time
+|idea3=Superior Firepower
+|idea3effect={{green|+1|b}} Land leader fire
+|idea3icon=Leader fire
+|idea4=Glorious Arms
+|idea4effect={{green|+100%|b}} Prestige from land battles
+|idea4icon=Prestige from land
+|idea5=Engineer Corps
+|idea5effect={{green|+20%|b}} Siege ability
+|idea5icon=siege ability
+|idea6=Grand Army
+|idea6effect={{green|+20%|b}} Land force limit modifier
+|idea6icon=Land force limit modifier
+|idea7=Esprit de Corps
+|idea7effect={{green|+5%|b}} Discipline
+|idea7icon=Discipline
+|bonus={{green|+5%|b}} Recover army morale speed
+|events=[[Offensive idea group events]]
+}}
+
+{{idea group
+|version=1.32
+|name=Quality
+|idea1=Private to Marshal
+|idea1effect={{green|+10%|b}} Infantry combat ability
+|idea1icon=Infantry power
+|idea2=Quality Education
+|idea2effect={{green|+0.5|b}} Yearly army tradition
+|idea2icon=Yearly army tradition
+|idea3=Finest of Horses
+|idea3effect={{green|+10%|b}} Cavalry combat ability
+|idea3icon=Cavalry power
+|idea4=Corvettes
+|idea4effect={{green|+5%|b}} Ship durability
+|idea4icon=Ship durability
+|idea5=Naval Drill
+|idea5effect={{green|+10%|b}} Morale of navies
+|idea5icon=Naval morale
+|idea6=Copper Bottoms
+|idea6effect={{green|−25%|b}} Naval attrition
+|idea6icon=naval attrition
+|idea7=Massed Battery
+|idea7effect={{green|+10%|b}} Artillery combat ability
+|idea7icon=Artillery power
+|bonus={{green|+5%|b}} Discipline
+|events=[[Quality idea group events]]
+}}
+
+{{idea group
+|version=1.32
+|name=Quantity
+|idea1=Levée en Masse
+|idea1effect={{green|+50%|b}} National manpower modifier
+|idea1icon=National manpower modifier
+|idea2=The Young can Serve
+|idea2effect={{green|+20%|b}} Manpower recovery speed
+|idea2icon=Manpower recovery speed
+|idea3=Enforced Service
+|idea3effect={{green|−10%|b}} Regiment cost
+|idea3icon=Regiment cost
+|idea4=The Old and Infirm
+|idea4effect={{green|−5%|b}} Land maintenance modifier
+|idea4icon=Land maintenance modifier
+|idea5=Camp Followers
+|idea5effect={{green|+33%|b}} National supply limit modifier
+|idea5icon=National supply limit modifier
+|idea6=Conscripted Garrisons
+|idea6effect={{green|+25%|b}} Garrison size
+|idea6icon=garrison size
+|idea7=Expanded Supply Trains
+|idea7effect={{green|−10%|b}} Land attrition
+|idea7icon=land attrition
+|bonus={{green|+50%|b}} Land force limit modifier
+|events=[[Quantity idea group events]]
+}}
+}}<!-- end box wrapper -->
+
+== Events ==
+{{Main|List of idea group events}}
+Idea group events are pulse based [[events]]. They occur at regular intervals (5 years) based on the nation's idea groups (not all groups are on the same interval).
+
+In addition, the choice of ideas also has some influence in how often an event may happen, known as MTTH; meaning they can increase or decrease the likelihood of a certain to happened in over other events in their pulse group.
+
+== AI preference ==
+{{SVersion|1.30}}
+The [[AI]] is dynamically determined according to the current conditions of the country.<ref>It is still possible to revert to the old system by changing "AI_USES_HISTORICAL_IDEA_GROUPS" to 1 in {{path|common/defines.lua}}. Note, however, that the AI will never use historical idea groups in a custom/random setup.</ref>
+To decide which idea group it should take, the AI employs a "weight system": each idea group is given a certain weight and the higher this weight is for an idea group, the higher the chances that the AI will choose it. The AI will never choose an idea group with a weight of 0.<ref>The weights and their modifiers are defined in {{path|common/ideas/00_basic_ideas.txt}} at the bottom of each idea group (ai_will_do).</ref>
+
+{| class="wikitable sortable mw-collapsible mw-collapsed"
+! Idea group
+! Base weight
+! Weight modifiers<ref>Multiple valid modifiers will stack</ref>
+|-
+| {{icon|Aristocratic}} Aristocratic
+| 0.45
+| 
+* {{red|×0.5}} is a [[subject nation]]
+|-
+| {{icon|Plutocratic}} Plutocratic
+| 0.4
+|
+|-
+| {{icon|Innovative}} Innovative
+| 0.3
+| 
+* {{green|×2}} has enacted “[[Steppe Nomads]]” government reform
+* {{green|x2}} has at least 20 provinces
+* {{green|x2}} has at least 50 provinces
+|-
+| {{icon|Religious}} Religious
+| 0.9
+| 
+* {{red|×0}} has the [[#Humanist|Humanist idea group]]
+|-
+| {{icon|Espionage}} Espionage
+| 0.75
+|
+|-
+| {{icon|Diplomatic}} Diplomatic
+| 0.67
+| 
+* {{green|×2}} is the emperor of the [[Holy Roman Empire]]
+* {{green|×1.5}} has at least 2 [[vassals]]
+|-
+| {{icon|Offensive}} Offensive
+| 0.94
+|
+|-
+| {{icon|Defensive}} Defensive
+| 0.77
+|
+|-
+| {{icon|Trade}} Trade
+| 0.7
+| 
+* {{red|×0}} does ''not'' use “[[Merchant Republic]]” mechanics and has fewer than 6 [[cities]]
+* {{green|x3}} uses “Merchant Republic” mechanics
+|-
+| {{icon|Economic}} Economic
+| 0.85
+| 
+* {{green|×1.5}} has at least 5 inflation
+* {{green|×1.5}} has at least 10 inflation
+* {{green|×2}} has enacted “[[Steppe Nomads]]” government reform
+* {{green|x1.3}} has at least 20 cities
+* {{green|x1.3}} has at least 50 cities
+|-
+| {{icon|Exploration}} Exploration
+| 0.75
+| 
+* {{red|×0}} is a [[colonial nation]]
+* {{red|×0}} is [[Government#Tribal_governments|tribal]]
+* {{red|×0}} is a [[subject nation]]
+* {{red|×0}} is [[primitive]]
+* {{red|×0}} If it is currently the “[[Age of Revolutions]]”
+* {{red|×0}} If:
+**does ''not'' own a coastal province that is ''not'' bordering the Eastern Mediterranean sea zone
+**does ''not'' own a province that:
+*** is connected to the capital
+*** has an empty neighbor province.
+* {{red|×0.5}} If:
+**does ''not'' own a coastal province that:
+***is ''not'' bordering the Mediterranean (without Straits of Gibraltar and Gulf of Almeria) Red Sea or Baltic Sea sea zone
+**does ''not'' own a province that:
+*** is connected to the capital
+*** has an empty neighbor province.
+* {{red|×0.1}} If:
+**has less than 3 home ports
+**does ''not'' own a province that:
+*** is connected to the capital
+*** has an empty neighbor province.
+* {{red|×0.1}} if
+**does not have the [[Renaissance]] institution
+**is not {{flag|Portugal}}
+**is not {{flag|Castile}}
+* {{red|×0.1}} if
+** the [[capital]] province is ''not'' in [[France (region)]], [[Iberia]], [[European regions#Britain|Britain]] ''or'' the [[Low Countries]]
+** is ''not'' in the High American [[technology group]]
+* {{red|×0.5}} is {{flag|Aragon}}
+* {{red|×0.1}} it is before 1490 and the [[capital]] is ''not'' in [[Iberia]]
+* {{green|×10}} is in the High American [[technology group]]
+* {{green|×2}} has at least 5 [[home port]]s
+* {{green|×2}} has at least 10 home ports
+* {{green|×2}} has at least 15 home ports
+* {{green|×2}} has at least 20 home ports
+* {{green|×1000}} is {{flag|Portugal}}, {{flag|Castile}} ''or'' {{flag|Spain}}
+* {{green|×2}} is {{flag|Great Britain}}, the {{flag|Netherlands}}, {{flag|England}}, {{flag|France}} ''or'' {{flag|Kurland}}
+|-
+| {{icon| Maritime}} Maritime
+| 0.41
+| 
+* {{red|×0}} is [[Government#Tribal_governments|tribal]]
+* {{red|×0}} is [[primitive]]
+* {{red|×0}} has no [[home port]]s and is ''not'' a [[colonial nation]]
+* {{red|×0.41}} has less than 10 home ports
+* {{red|×0.41}} has at least 50 [[cities]]
+* {{green|×10}} has enacted “[[Pirate Republic]]” government reform
+|-
+| {{icon|Quality}} Quality
+| 0.49
+|
+|-
+| {{icon|Quantity}} Quantity
+| 1
+|
+|-
+| {{icon|Expansion}} Expansion
+| 0.48
+| 
+* {{green|×10}} has [[#Exploration|exploration]] idea group ''or'' is a [[colonial nation]]
+* {{green|x5}} is {{flag|Castile}}, {{flag|Portugal}} ''or'' {{flag|Spain}}
+* {{green|x10}} if
+** the {{icon|tr|24px}} Third Rome DLC is ''not'' enabled
+** is {{flag|Russia}}
+** has at least 20 [[cities]]
+** borders an uncolonized province
+* {{red|×0}} if
+** does ''not'' have [[#Exploration|exploration]] idea group
+** is ''not'' a [[colonial nation]]
+** does ''not'' border an empty province
+* {{red|×0.1}} is ''not'' in one of the following [[technology group]]s: Western, Eastern, Muslim.
+|-
+| {{icon|Administrative}} Administrative
+| 0.96
+| 
+* {{green|×2}} has enacted “[[Steppe Nomads]]” government reform
+|-
+| {{icon|Humanist}} Humanist
+| 0.9
+| 
+* {{red|×0}} has the [[#Religious|Religious idea group]]
+|-
+| {{icon|Influence}} Influence
+| 0.5
+| 
+* {{green|×1.5}} is the emperor of the [[Holy Roman Empire]]
+* {{green|×1.7}} has at least 1 [[vassal]]
+* {{green|×1.7}} has at least 2 vassals
+|-
+| {{icon|Naval}} Naval
+| 0.31
+| 
+* {{red|×0}} is [[Government#Tribal_governments|tribal]] or [[primitive]]
+* {{red|×0}} has no [[home port]]s and is ''not'' a [[colonial nation]]
+* {{red|×0.31}} has less than 10 home ports
+* {{red|×0.31}} has at least 50 [[cities]]
+* {{green|×10}} has enacted “[[Pirate Republic]]” government reform
+|}
+
+== Footnotes ==
+<references/> 
+{{clear}}
+
+{{mechanics navbox|Technology}}
+[[Category:Realm]]

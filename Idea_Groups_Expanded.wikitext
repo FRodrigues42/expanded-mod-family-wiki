@@ -1,0 +1,811 @@
+{{Mod
+|logo=Idea Groups Expanded.png
+|type=Balance, Fixes, Gameplay
+|author=Big Boss, LoStack
+|status=1.30
+|forum=
+|steam=2128766791
+}}
+
+= Description =
+
+Welcome to '''Idea Groups Expanded'''! Adding more than 14 new [[idea groups|ideagroups]], IGE looks to greatly rebalance and [[mod|expand]] the vanilla content. Experience unique ideagroups for [[Hordes]], [[Republic#Pirate_Republic|Pirate Republics]], [[great power|Great Powers]] & more!
+
+= Administrative groups =
+{{box wrapper|align-items=stretch|
+
+{{infobox
+|header= <h3 style="height:50px;">[[File:IGEAdministrative idea group.png]] Administrative</h3>
+|width= 330px
+|float= left
+|clear= left
+|content={{SVersion|1.30
+<!-- Category: Administrative -->|infobox}}
+<hr>
+
+[[File:Administrative_advisor_cost.png|28px]]''' Administrative Representative'''
+: {{green|−20%|b}} Administrative advisor cost
+----
+[[File:core creation cost.png|28px]]''' Adaptability'''
+: {{green|−20%|b}} Core creation cost
+----
+[[File:Governing_capacity.png|28px]]''' Expand Royal Administration'''
+: {{green|−50%|b}} Expand administration cost
+----
+[[File:interest.png|28px]]''' Bookkeeping'''
+: {{green|−0.5|b}} Interest per annum
+----
+[[File:Minimum_autonomy_in_territories.png|28px]]''' Borderlands Control'''
+: {{green|−10%|b}} Minimum autonomy in territories
+----
+[[File:administrative efficiency.png|28px]]''' Administrative Efficiency'''
+: {{green|+2.5%|b}} Administrative efficiency
+:<!-- {{icon|advisor pool|28px}} -->{{green|+1|b}} Possible advisors
+----
+[[File:adm tech cost modifier.png|28px]]''' Civil Service'''
+: {{green|−10%|b}} Administrative technology cost
+----
+[[File:Idea bonus.png|28px]] '''Bonus:'''
+: {{green|+20%|b}} Governing capacity modifier
+<section end=administrative_ideas/>
+}}
+
+{{infobox
+|header= <h3 style="height:50px;">[[File:IGEChristian idea group.png]] Christian</h3>
+|width= 330px
+|float= left
+|clear= left
+|content={{SVersion|1.30
+<!-- Category: Administrative -->|infobox}}
+<hr>
+'''Notes:''' 
+''Can be selected only if the following are true:
+* Religion is in [[File:Cult_Christianity.png|28px|link=Christian_denominations]] Christian group
+<section end=christian_idea_groups_expanded/>''
+----
+
+[[File:missionaries.png|28px]]''' Missionary Schools'''
+: {{green|+1|b}} Missionaries
+:<!-- {{icon|missionary maintenance cost|28px}} -->{{green|−33%|b}} Missionary Maintenance Cost
+----
+[[File:missionary strength.png|28px]]''' Divine Supremacy'''
+: {{green|+3%|b}} Missionary strength
+----
+[[File:papal influence.png|28px]]''' Religious Fervor'''
+: {{green|+2|b}} Yearly papal influence
+:<!-- {{icon|church power|28px}} -->{{green|+0.25|b}} {{DLC-only|Church power}}
+: {{green|+0.5|b}} Yearly patriarch authority
+:<!-- {{icon|monthly fervor|28px}} -->{{green|+1|b}} {{DLC-only|Monthly fervor}}
+:<!-- {{icon|tolerance own|28px}} -->{{green|+1|b}} Tolerance of the true faith
+----
+[[File:War_score_cost_vs_other_religions.png|28px]]''' Sacret Struggle'''
+: {{green|-10%|b}} War score cost vs other religions
+----
+[[File:cb on religious enemies.png|28px]]''' Deus Vult'''
+: Gain permanent "Holy War" and "Purging of Heresy" [[Casus Belli]] against heathens and heretics respectively.
+----
+[[File:religious unity.png|28px]]''' Faith Through Unity'''
+: {{green|+10%|b}} Religious unity
+:<!-- {{icon|tolerance own|28px}} -->{{green|+1|b}} Tolerance of the true faith
+----
+[[File:global heretic missionary strength.png|28px]]''' Unwavering Will'''
+: {{green|+2%|b}} Missionary strength vs heretics
+----
+[[File:Idea bonus.png|28px]] '''Bonus:'''
+: {{green|-50%|b}} Cost of enforcing religion through war
+}}
+
+{{infobox
+|header= <h3 style="height:50px;">[[File:IGEConfucian idea group.png]] Confucian</h3>
+|width= 330px
+|float= left
+|clear= left
+|content={{SVersion|1.30
+<!-- Category: Administrative -->|infobox}}
+<hr>
+'''Notes:''' 
+''Can be selected only if the following are true:
+* Religion is {{icon|confucianism|28px}} Confucian
+<section end=confucian_idea_groups_expanded/>''
+----
+
+[[File:Yearly_harmony_increase.png|28px]]''' Wucháng'''
+: {{green|+25%|b}} Religious harmonization speed
+----
+[[File:idea cost.png|28px]]''' Study the Five Classics'''
+: {{green|−5%|b}} Idea cost
+:<!-- {{icon|tolerance heretic|28px}} -->{{green|+1|b}} Tolerance of heretics
+----
+[[File:improve relations.png|28px]]''' Syncretic Philosophy'''
+: {{green|+25%|b}} Improve relations
+----
+[[File:stability cost modifier.png|28px]]''' Axis Mundi'''
+: {{green|−20%|b}} Stability cost modifier
+----
+[[File:build cost.png|28px]]''' Ancestral Shrines'''
+: {{green|−15%|b}} Construction cost
+----
+[[File:meritocracy.png|28px]]''' Nobility by Virtue'''
+: {{green|+0.5|b}} Yearly meritocracy
+:<!-- {{icon|advisor cost|28px}} -->{{green|−15%|b}} Advisor costs
+----
+[[File:Yearly_harmony_increase.png|28px]]''' Social Harmony'''
+: {{green|+0.25|b}} Yearly harmony increase
+----
+[[File:Idea bonus.png|28px]] '''Bonus:'''
+: <!-- {{icon|tolerance own|28px}} -->{{green|+1|b}} Tolerance of the true faith
+}}
+
+{{infobox
+|header= <h3 style="height:50px;">[[File:IGEExpansion idea group.png]] Expansion</h3>
+|width= 330px
+|float= left
+|clear= left
+|content={{SVersion|1.30
+<!-- Category: Administrative -->|infobox}}
+<hr>
+
+[[File:colonists.png|28px]]''' Additional Colonists'''
+: {{green|+1|b}} Colonists
+----
+[[File:merchants.png|28px]]''' Additional Merchants'''
+: {{green|+1|b}} Merchants
+----
+[[File:global settler increase.png|28px]]''' Faster Colonists'''
+: {{green|+20|b}} Global settler increase
+----
+[[File:Trade_company_governing_cost.png|28px]]''' Factories'''
+: {{green|-20%|b}} Trade company governing cost
+: {{green|-25%|b}} Center of trade upgrade cost
+----
+[[File:diplomatic upkeep.png|28px]]''' Additional Diplomats'''
+: {{green|+1|b}} Diplomatic relations
+----
+[[File:settler chance.png|28px]]''' General Colonization Law'''
+: {{green|+10|b}} Colonial subject settler increase
+: {{green|+10%|b}} Colonial subject settler chance
+: {{green|+5%|b}} Settler chance
+----
+[[File:global trade power.png|28px]]''' Competitive Merchants'''
+: {{green|+20%|b}} Global trade power
+----
+[[File:Idea bonus.png|28px]] '''Bonus:'''
+: Gain permanent "Overseas Expansion" [[Casus Belli]] against countries with Indian, Sub-Saharan, Chinese or Nomad tech group. (Only usable if country's tech group is Western, Eastern or Anatolian.)
+: {{green|-10%|b}} Cost to promote mercantilism
+<section end=expansion_ideas/>
+}}
+
+{{infobox
+|header= <h3 style="height:50px;">[[File:IGEImperial idea group.png]] Imperial</h3>
+|width= 330px
+|float= left
+|clear= left
+|content={{SVersion|1.30
+<!-- Category: Administrative -->|infobox}}
+<hr>
+
+[[File:yearly corruption.png|28px]]''' Imperial Reforms'''
+: {{green|−0.1|b}} Yearly corruption
+----
+[[File:legitimacy.png|28px]]''' Born in the Purple'''
+: {{green|+0.5|b}} Yearly legitimacy
+:<!-- {{icon|yearly republican tradition|28px}} -->{{green|0.2|b}} Yearly republican tradition
+:<!-- {{icon|yearly horde unity|28px}} -->{{green|+0.5|b}} Yearly horde unity
+:<!-- {{icon|yearly devotion|28px}} -->{{green|+1|b}} {{DLC-only|Yearly devotion}}
+:<!-- {{icon|chance of new heir|28px}} -->{{green|+50%|b}} Chance of new heir
+----
+[[File:advisor cost.png|28px]]''' Efficient Bureaucracy'''
+: {{green|−10%|b}} Advisor costs
+:<!-- {{icon|stability cost|28px}} -->{{green|−10%|b}} Stability cost modifier
+----
+[[File:build cost.png|28px]]''' Urban Development'''
+: {{green|−10%|b}} Construction cost
+:<!-- {{icon|development cost|28px}} -->{{DLC-only|Development cost|−5|b}}
+----
+[[File:max absolutism.png|28px]]''' Supreme Authority'''
+: {{green|+5|b}} Maximum absolutism
+:<!-- {{icon|absolutism|28px}} -->{{green|+50|b}} Yearly absolutism
+----
+[[File:liberty desire in subjects.png|28px]]''' Benign Legislation'''
+: {{green|−5%|b}} Liberty desire in subjects
+----
+[[File:diplomatic reputation.png|28px]]''' Benevolent Reputation'''
+: {{green|+1|b}} Diplomatic reputation
+:<!-- {{icon|diplomatic upkeep|28px}} -->{{green|+1|b}} Diplomatic relations
+----
+[[File:Idea bonus.png|28px]] '''Bonus:'''
+: {{green|−15%|b}} Expand administration cost
+}}
+
+{{infobox
+|header= <h3 style="height:50px;">[[File:IGEIslamic idea group.png]] Islamic</h3>
+|width= 330px
+|float= left
+|clear= left
+|content={{SVersion|1.30
+<!-- Category: Administrative -->|infobox}}
+<hr>
+'''Notes:''' 
+''Can be selected only if the following are true:
+* Religion is in [[File:Cult_Islam.png|28px|link=Muslim_denominations]] Muslim group
+<section end=muslim_idea_groups_expanded/>''
+----
+
+[[File:missionary strength.png|28px]]''' Adhan'''
+: {{green|+3%|b}} Missionary strength
+----
+[[File:national tax modifier.png|28px]]''' Jizya Tax'''
+: {{green|+10%|b}} National tax modifier
+: {{green|+5%|b}} Dhimmi loyalty equilibrium
+----
+[[File:Clergy_influence.png|28px]]''' Religious Warriors'''
+: Upon ascension to the throne, choose your path of kingship
+: {{green|+5%|b}} Clergy influence
+----
+[[File:missionaries.png|28px]]''' Twelve Imams'''
+: {{green|+1|b}} Missionaries
+:<!-- {{icon|missionary maintenance cost|28px}} -->{{green|−33%|b}} Missionary Maintenance Cost
+----
+[[File:legitimacy.png|28px]]''' Haji Pilgrimage'''
+: {{green|+1|b}} Yearly legitimacy
+:<!-- {{icon|yearly republican tradition|28px}} -->{{green|0.3|b}} Yearly republican tradition
+:<!-- {{icon|yearly devotion|28px}} -->{{green|+1|b}} {{DLC-only|Yearly devotion}}
+:<!-- {{icon|yearly horde unity|28px}} -->{{green|+1|b}} Yearly horde unity
+----
+[[File:cb on religious enemies.png|28px]]''' Jihad'''
+: Gain permanent "Holy War" and "Purging of Heresy" [[Casus Belli]] against heathens and heretics respectively.
+----
+[[File:tolerance own.png|28px]]''' Shadada'''
+: {{green|+2|b}} Tolerance of the true faith
+----
+[[File:Idea bonus.png|28px]] '''Bonus:'''
+: <!-- {{icon|global heretic missionary strength|28px}} -->{{green|+2%|b}} Missionary strength vs heretics
+}}
+
+{{infobox
+|header= <h3 style="height:50px;">[[File:IGEState Affairs idea group.png]] State Affairs</h3>
+|width= 330px
+|float= left
+|clear= left
+|content={{SVersion|1.30
+<!-- Category: Administrative -->|infobox}}
+<hr>
+
+[[File:yearly corruption.png|28px]]''' Meritocratic Offices'''
+: {{green|−0.05|b}} Yearly corruption
+:<!-- {{icon|advisor cost|28px}} -->{{green|−10%|b}} Advisor costs
+----
+[[File:Autonomy_change_cooldown.png|28px]]''' Modernized Administration'''
+: {{green|−33%|b}} Autonomy change cooldown
+:<!-- {{icon|global autonomy|28px}} -->{{green|−0.025|b}} Monthly autonomy change
+----
+[[File:State_governing_cost.png|28px]]''' Red Tape Reduction'''
+: {{green|−10%|b}} States governing cost
+----
+[[File:Estates_loyalty.png|28px]]''' Efficient Regional Governors'''
+: {{green|+5%|b}} All estates loyalty equilibrium
+----
+[[File:stability cost modifier.png|28px]]''' Stable Rule'''
+: {{green|−20%|b}} Stability cost modifier
+----
+[[File:build cost.png|28px]]''' Public Works'''
+: {{green|−10%|b}} Construction cost
+: {{green|−20%|b}} Construction time
+----
+[[File:production efficiency.png|28px]]''' Production Quotas'''
+: {{green|+10%|b}} Production efficiency
+:<!-- {{icon|goods produced modifier|28px}} -->{{green|+5%|b}} Goods produced modifier
+----
+[[File:Idea bonus.png|28px]] '''Bonus:'''
+: {{green|+20%|b}} Governing capacity modifier
+}}
+
+}}
+
+= Diplomatic groups =
+{{box wrapper|align-items=stretch|
+
+{{infobox
+|header= <h3 style="height:50px;">[[File:IGEEspionage idea group.png]] Espionage</h3>
+|width= 330px
+|float= left
+|clear= left
+|content={{SVersion|1.30
+<!-- Category: Diplomatic -->|infobox}}
+<hr>
+
+[[File:spy offense.png|28px]]''' Efficient Spies'''
+: {{green|+50%|b}} Spy offense
+:<!-- {{icon|advisor cost|28px}} -->{{green|−10%|b}} Advisor costs
+----
+[[File:diplomats.png|28px]]''' Agent Training'''
+: Enables {{yellow|Disrupt Enemy Logistics}} against foes within whom we have at least 80 Spy Network
+: {{green|+1|b}} Diplomats
+----
+[[File:ae impact.png|28px]]''' State Propaganda'''
+: {{green|−20%|b}} Aggressive expansion impact
+----
+[[File:global spy defence.png|28px]]''' Vetting'''
+: {{green|+33%|b}} National spy defence
+----
+[[File:cost to fabricate claims.png|28px]]''' Claim Fabrication'''
+: {{green|−50%|b}} Cost to fabricate claims
+: May fabricate claims for subjects
+----
+[[File:embargo efficiency.png|28px]]''' Privateers'''
+: {{green|+50%|b}} Embargo efficiency
+:<!-- {{icon|privateer efficiency|28px}} -->{{green|+33%|b}} Privateer efficiency
+----
+[[File:yearly corruption.png|28px]]''' Audit Checks'''
+: {{green|−0.1|b}} Yearly corruption
+----
+[[File:Idea bonus.png|28px]] '''Bonus:'''
+: <!-- {{icon|reform desire|28px}} -->{{green|+50%|b}} Rebel support efficiency
+<section end=spy_ideas/>
+}}
+
+{{infobox
+|header= <h3 style="height:50px;">[[File:IGEGreat Power idea group.png]] Great Power</h3>
+|width= 330px
+|float= left
+|clear= left
+|content={{SVersion|1.30
+<!-- Category: Diplomatic -->|infobox}}
+<hr>
+'''Notes:''' 
+''Can be selected only if the following are true:
+* Is a {{icon|great power|28px}} Great Power
+<section end=great_power_idea_groups_expanded/>''
+----
+
+[[File:diplomatic upkeep.png|28px]]''' Will to Power'''
+: {{green|+1|b}} Diplomatic relations
+: {{green|+25|b}} Vassalizatation acceptance
+----
+[[File:unjustified demands.png|28px]]''' Great Power Politics'''
+: Enables adding weak nations into our {{yellow|Sphere of Influence}}
+: Enables {{yellow|Demilitarize}} against nations during peace deal talks
+: {{green|−10%|b}} Unjustified demands
+----
+[[File:advisor pool.png|28px]]''' Illustrious Council'''
+: {{green|+1|b}} Possible advisors
+----
+[[File:Monthly_heir_support_gain.png|28px]]''' Meritorious Influence'''
+: {{green|+0.2|b}} Monthly heir support gain
+: {{green|+5%|b}} Mandate growth modifier
+:<!-- {{icon|tribal allegiance|28px}} -->{{green|+0.5|b}} {{DLC-only|Yearly tribal allegiance}}
+: {{green|+0.05|b}} Militarization of state
+: {{green|-20%|b}} Diplomatic advisor cost
+----
+[[File:Reform_progress_growth.png|28px]]''' Governmental Reformation'''
+: {{green|+15%|b}} Reform progress growth
+----
+[[File:Administrative_free_policies.png|28px]]''' Bolster our Administration'''
+: {{green|+1|b}} Administrative free policies
+----
+[[File:max promoted cultures.png|28px]]''' Operational Refinement'''
+: {{green|+2|b}} Max promoted cultures
+----
+[[File:Idea bonus.png|28px]] '''Bonus:'''
+: {{green|+10%|b}} Governing capacity modifier
+}}
+
+{{infobox
+|header= <h3 style="height:50px;">[[File:IGENational Propaganda idea group.png]] National Propaganda</h3>
+|width= 330px
+|float= left
+|clear= left
+|content={{SVersion|1.30
+<!-- Category: Diplomatic -->|infobox}}
+<hr>
+
+[[File:prestige.png|28px]]''' Civil Honor'''
+: {{green|+1|b}} Yearly prestige
+----
+[[File:morale of armies.png|28px]]''' National Pride'''
+: {{green|+5%|b}} Morale of armies
+:<!-- {{icon|national manpower modifier|28px}} -->{{green|+15%|b}} National manpower modifier
+----
+[[File:culture conversion cost.png|28px]]''' Cultural Superiority'''
+: {{green|−20%|b}} Culture conversion cost
+: {{green|−25%|b}} Foreign core duration
+----
+[[File:Harsh_treatment_cost.png|28px]]''' State Censorship'''
+: {{green|−25%|b}} Harsh treatment cost
+----
+[[File:Cost_of_advisors_with_ruler's_culture.png|28px]]''' Uniform Court'''
+: {{green|−25%|b}} Cost of advisors with ruler's culture
+----
+[[File:ae impact.png|28px]]''' Nationalistic Spirit'''
+: {{green|−10%|b}} Aggressive expansion impact
+:<!-- {{icon|unjustified demands|28px}} -->{{green|−10%|b}} Unjustified demands
+----
+[[File:war exhaustion.png|28px]]''' Unwavering Spirit'''
+: {{green|0.025|b}} Monthly war exhaustion
+----
+[[File:Idea bonus.png|28px]] '''Bonus:'''
+: {{green|−50%|b}} War taxes cost
+}}
+
+{{infobox
+|header= <h3 style="height:50px;">[[File:IGEPower Projection idea group.png]] Power Projection</h3>
+|width= 330px
+|float= left
+|clear= left
+|content={{SVersion|1.30
+<!-- Category: Diplomatic -->|infobox}}
+<hr>
+
+[[File:Power_projection_from_insults.png|28px]]''' Long Echo'''
+: {{green|+50%|b}} Power projection from insults
+----
+[[File:diplomatic reputation.png|28px]]''' Soft Power'''
+: {{green|+2|b}} Diplomatic reputation
+----
+[[File:spy offense.png|28px]]''' Foreign Influence'''
+: {{green|+33%|b}} Spy offense
+:<!-- {{icon|discovered relations impact|28px}} -->{{green|−25%|b}} Covert action relation impact
+----
+[[File:naval forcelimit.png|28px]]''' Global Navy'''
+: {{green|+33%|b}} Naval forcelimit modifier
+----
+[[File:Marines_force_limit.png|28px]]''' Shock Marines'''
+: {{green|+20%|b}} Marines force limit
+: {{green|+25%|b}} National sailors modifier
+----
+[[File:Merchant_trade_power.png|28px]]''' Influencial Traders'''
+: {{green|+10%|b}} Merchant trade power
+: {{green|-20%|b}} Cost to promote mercantilism
+----
+[[File:Ship_trade_power.png|28px]]''' Far and Wide'''
+: {{green|+25%|b}} Ship trade power
+:<!-- {{icon|trade range|28px}} -->{{green|+33%|b}} Trade range
+----
+[[File:Idea bonus.png|28px]] '''Bonus:'''
+: <!-- {{icon|prestige|28px}} -->{{green|+1|b}} Yearly prestige
+}}
+
+}}
+
+= Military groups =
+{{box wrapper|align-items=stretch|
+
+{{infobox
+|header= <h3 style="height:50px;">[[File:IGECossack idea group.png]] Cossack</h3>
+|width= 330px
+|float= left
+|clear= left
+|content={{SVersion|1.30
+<!-- Category: Military -->|infobox}}
+<hr>
+'''Notes:''' 
+''Can be selected only if the following are true:
+* At least one of:
+** Technology group is {{icon|eastern|28px}} Eastern
+** Has estate: {{icon|cossacks|28px}} Cossacks
+<section end=cossacks_idea_groups_expanded/>''
+----
+
+[[File:Cavalry_flanking_ability.png|28px]]''' Steppe Tactics'''
+: {{green|+50%|b}} Cavalry flanking ability
+:<!-- {{icon|cavalry power|28px}} -->{{green|+5%|b}} Cavalry combat ability
+----
+[[File:May_raid_coasts.png|28px]]''' Raid on Konstantiniyye'''
+: May raid coasts, including coasts of countries with same religion
+----
+[[File:Cossacks_loyalty_equilibrium.png|28px]]''' Free Men Estate'''
+: {{green|+10%|b}} Cossacks loyalty equilibrium
+:<!-- {{icon|max absolutism|28px}} -->{{green|+5|b}} Maximum absolutism
+----
+[[File:Looting_speed.png|28px]]''' Raid Parties'''
+: {{green|+25%|b}} Looting speed
+: {{green|+10%|b}} Movement speed
+----
+[[File:development cost.png|28px]]''' Land Grants'''
+: {{DLC-only|Development cost|−10|b}}
+----
+[[File:garrison size.png|28px]]''' Border Patrols'''
+: {{green|+20%|b}} Garrison size
+----
+[[File:free leader pool.png|28px]]''' Hetman'''
+: {{green|+1|b}} Leader(s)<!-- sic --> without upkeep
+----
+[[File:Idea bonus.png|28px]] '''Bonus:'''
+: {{green|+50%|b}} Cavalry to infantry ratio
+}}
+
+{{infobox
+|header= <h3 style="height:50px;">[[File:IGEEngineering idea group.png]] Engineering</h3>
+|width= 330px
+|float= left
+|clear= left
+|content={{SVersion|1.30
+<!-- Category: Military -->|infobox}}
+<hr>
+
+[[File:Movement_speed.png|28px]]''' Vanguard Engineers'''
+: {{green|+20%|b}} Movement speed
+----
+[[File:Leader_siege.png|28px]]''' Engineer Lieutenants'''
+: {{green|+1|b}} Leader siege
+----
+[[File:Shock_damage_received.png|28px]]''' Field Fortifications'''
+: {{green|-5%|b}} Shock damage received
+: {{green|-5%|b}} Fire damage received
+----
+[[File:Construction_time.png|28px]]''' Roman Castrum'''
+: {{green|−0.10|b}} Monthly devastation in states with forts
+: {{green|−20%|b}} Construction time
+:<!-- {{icon|defensiveness|28px}} -->{{green|+10%|b}} Fort defense
+----
+[[File:development cost.png|28px]]''' Military Infrastructure'''
+: {{DLC-only|Development cost|−10|b}}
+:<!-- {{icon|build cost|28px}} -->{{green|−10%|b}} Construction cost
+----
+[[File:siege ability.png|28px]]''' Siege Camps'''
+: {{green|+10%|b}} Siege ability
+:<!-- {{icon|land attrition|28px}} -->{{green|−10%|b}} Land attrition
+----
+[[File:fort maintenance.png|28px]]''' Self-Reliant Garrisons'''
+: {{green|−20%|b}} Fort maintenance
+: {{green|+25%|b}} Garrison growth
+----
+[[File:Idea bonus.png|28px]] '''Bonus:'''
+: {{green|+33%|b}} National supply limit modifier
+}}
+
+{{infobox
+|header= <h3 style="height:50px;">[[File:IGEHorde idea group.png]] Horde</h3>
+|width= 330px
+|float= left
+|clear= left
+|content={{SVersion|1.30
+<!-- Category: Military -->|infobox}}
+<hr>
+'''Notes:''' 
+''Can be selected only if the following are true:
+* Has reform: {{icon|steppe nomads|28px}} Steppe nomads
+<section end=horde_idea_groups_expanded/>''
+----
+
+[[File:cavalry power.png|28px]]''' Steppe Cavalry'''
+: {{green|+5%|b}} Cavalry combat ability
+: {{green|+15%|b}} Cavalry to infantry ratio
+----
+[[File:Looting_speed.png|28px]]''' Direct Payment'''
+: {{green|+25%|b}} Looting speed
+:<!-- {{icon|manpower recovery speed|28px}} -->{{green|+10|b}} Manpower recovery speed
+----
+[[File:Movement_speed.png|28px]]''' Swift Steeds'''
+: {{green|+10%|b}} Movement speed
+----
+[[File:land leader shock.png|28px]]''' Shock Warfare'''
+: {{green|+1|b}} Land leader shock
+----
+[[File:Prestige_from_land_battles.png|28px]]''' Lessons of War'''
+: {{green|+100%|b}} Army tradition from battles
+----
+[[File:yearly horde unity.png|28px]]''' Peace Through Conquest'''
+: {{green|+1|b}} Yearly horde unity
+----
+[[File:razing power gain.png|28px]]''' Efficient Pillaging'''
+: {{green|+20%|b}} Razing power gain
+----
+[[File:Idea bonus.png|28px]] '''Bonus:'''
+: <!-- {{icon|land attrition|28px}} -->{{green|−10%|b}} Land attrition
+}}
+
+{{infobox
+|header= <h3 style="height:50px;">[[File:IGEMercenary Army idea group.png]] Mercenary Army</h3>
+|width= 330px
+|float= left
+|clear= left
+|content={{SVersion|1.30
+<!-- Category: Military -->|infobox}}
+<hr>
+
+[[File:Military_advisor_cost.png|28px]]''' Funding the War Council'''
+: {{green|−20%|b}} Military advisor cost
+----
+[[File:mercenary cost.png|28px]]''' Organize Mercenary Regiments'''
+: {{green|−10%|b}} Mercenary cost
+----
+[[File:merc maintenance modifier.png|28px]]''' Standardized Contractors'''
+: {{green|−10%|b}} Mercenary maintenance modifier
+----
+[[File:Mercenary_manpower.png|28px]]''' Young Recruits'''
+: {{green|+25%|b}} Mercenary manpower
+----
+[[File:Looting_speed.png|28px]]''' Letter of Conduct'''
+: {{green|+33%|b}} Looting speed
+:<!-- {{icon|morale of armies|28px}} -->{{green|+5%|b}} Morale of armies
+----
+[[File:Prestige_from_land_battles.png|28px]]''' Efficient Military Logistics'''
+: {{green|+2.5%|b}} Mercenary discipline per age
+: {{green|+50%|b}} Army tradition from battles
+----
+[[File:Mercenary_manpower.png|28px]]''' A Fistful of Ducats'''
+: New mercenary companies will be available for hire
+: {{green|+50%|b}} Possible condottieri
+----
+[[File:Idea bonus.png|28px]] '''Bonus:'''
+: <!-- {{icon|recover army morale speed|28px}} -->{{green|+10%|b}} Recover army morale speed
+<section end=mercenary_army_idea_groups_expanded/>
+}}
+
+{{infobox
+|header= <h3 style="height:50px;">[[File:IGEPirate idea group.png]] Pirate</h3>
+|width= 330px
+|float= left
+|clear= left
+|content={{SVersion|1.30
+<!-- Category: Military -->|infobox}}
+<hr>
+'''Notes:''' 
+''Can be selected only if the following are true:
+* Has reform: {{icon|captains influence|28px}} Pirate Republic
+<section end=piracy_idea_groups_expanded/>''
+----
+
+[[File:Looting_speed.png|28px]]''' Loot for All!'''
+: {{green|+50%|b}} Looting speed
+:<!-- {{icon|morale of armies|28px}} -->{{green|+10%|b}} Morale of armies
+----
+[[File:navy tradition.png|28px]]''' Veteran Seadogs'''
+: {{green|+0.5|b}} Yearly naval tradition
+:<!-- {{icon|naval leader fire|28px}} -->{{green|+1|b}} Naval leader fire
+----
+[[File:privateer efficiency.png|28px]]''' Black Flag Raiders'''
+: {{green|+33%|b}} Privateer efficiency
+----
+[[File:Local_ship_repair.png|28px]]''' Refugee Shipwrights'''
+: Ships repair while in coastal sea provinces
+----
+[[File:Naval_combat_bonus_off_owned_coast.png|28px]]''' Defending the Coasts'''
+: {{green|+1|b}} Naval combat bonus off owned coast
+----
+[[File:Marines_force_limit.png|28px]]''' Organized Seaman Ranks'''
+: {{green|+20%|b}} Marines force limit
+: {{green|+25%|b}} National sailors modifier
+----
+[[File:Chance_to_capture_enemy_ships.png|28px]]''' Pioneered Grappling Hooks'''
+: {{green|+25%|b}} Chance to capture enemy ships
+----
+[[File:Idea bonus.png|28px]] '''Bonus:'''
+: <!-- {{icon|yearly republican tradition|28px}} -->{{green|0.25|b}} Yearly republican tradition
+}}
+
+{{infobox
+|header= <h3 style="height:50px;">[[File:IGEPlutocratic idea group.png]] Plutocratic</h3>
+|width= 330px
+|float= left
+|clear= left
+|content={{SVersion|1.30
+<!-- Category: Military -->|infobox}}
+<hr>
+'''Notes:''' 
+''Can be selected only if the following are true:
+* Has government attribute: Allows Plutocratic Idea Group
+* None of:
+** Has reform: {{icon|captains influence|28px}} Pirate Republic
+<section end=plutocracy_ideas/>''
+----
+
+[[File:yearly corruption.png|28px]]''' Tradition of Payment'''
+: {{green|−0.1|b}} Yearly corruption
+----
+[[File:morale of armies.png|28px]]''' Abolished Serfdom'''
+: {{green|+5%|b}} Morale of armies
+:<!-- {{icon|national manpower modifier|28px}} -->{{green|+10%|b}} National manpower modifier
+----
+[[File:national unrest.png|28px]]''' Bill of Rights'''
+: {{green|−1|b}} National unrest
+:<!-- {{icon|years of separatism|28px}} -->{{green|−5|b}} Years of separatism
+----
+[[File:merchants.png|28px]]''' Free Merchants'''
+: {{green|+1|b}} Merchants
+: {{green|+5%|b}} Merchant trade power
+----
+[[File:goods produced modifier.png|28px]]''' Free Subjects'''
+: {{green|+10%|b}} Goods produced modifier
+:<!-- {{icon|vassal forcelimit bonus|28px}} -->{{green|+0.5|b}} Vassal force limit contribution
+----
+[[File:caravan power.png|28px]]''' Free Cities'''
+: {{green|+10%|b}} Caravan power
+:<!-- {{icon|provincial trade power modifier|28px}} -->{{green|+10%|b}} Provincial trade power modifier
+----
+[[File:manpower recovery speed.png|28px]]''' Emancipation'''
+: {{green|+20|b}} Manpower recovery speed
+----
+[[File:Idea bonus.png|28px]] '''Bonus:'''
+: {{green|+20%|b}} Ship trade power
+: {{green|+10%|b}} Burghers loyalty equilibrium
+: {{green|+10%|b}} Vaishyas loyalty equilibrium
+}}
+
+{{infobox
+|header= <h3 style="height:50px;">[[File:IGEStanding Army idea group.png]] Standing Army</h3>
+|width= 330px
+|float= left
+|clear= left
+|content={{SVersion|1.30
+<!-- Category: Military -->|infobox}}
+<hr>
+
+[[File:Army_drill_gain_modifier.png|28px]]''' Military Drills'''
+: {{green|+25%|b}} Army drill gain modifier
+----
+[[File:siege ability.png|28px]]''' Modern Cannons'''
+: {{green|+15%|b}} Siege ability
+: {{green|+5%|b}} Artillery damage from back row
+----
+[[File:infantry power.png|28px]]''' Matchlock Formations'''
+: {{green|+5%|b}} Infantry combat ability
+: {{green|-5%|b}} Fire damage received
+----
+[[File:land maintenance modifier.png|28px]]''' Regiment Logistics'''
+: {{green|−5%|b}} Land maintenance modifier
+----
+[[File:Army_drill_decay_modifier.png|28px]]''' Standardized Uniforms'''
+: {{green|−25%|b}} Regiment drill loss
+:<!-- {{icon|infantry cost|28px}} -->{{green|−5%|b}} Infantry cost
+----
+[[File:army tradition decay.png|28px]]''' Lessons of Tradition'''
+: {{green|−1%|b}} Army tradition decay
+----
+[[File:May_recruit_female_generals.png|28px]]''' Meritocratic Promotion'''
+: May recruit female generals
+: {{green|−10%|b}} Leader cost
+----
+[[File:Idea bonus.png|28px]] '''Bonus:'''
+: <!-- {{icon|yearly army professionalism|28px}} -->{{green|+0.25%|b}} Yearly army professionalism
+<section end=standing_army_idea_groups_expanded/>
+}}
+
+{{infobox
+|header= <h3 style="height:50px;">[[File:IGETheocratic idea group.png]] Theocratic</h3>
+|width= 330px
+|float= left
+|clear= left
+|content={{SVersion|1.30
+<!-- Category: Military -->|infobox}}
+<hr>
+'''Notes:''' 
+''Can be selected only if the following are true:
+* At least one of:
+** Has government attribute: Allows Theocratic Idea Group
+** Government is {{icon|theocracy|28px}} theocracy
+<section end=theocratic_idea_groups_expanded/>''
+----
+
+[[File:discipline.png|28px]]''' Knightly Duty'''
+: {{green|+2.5%|b}} Discipline
+:<!-- {{icon|cavalry cost|28px}} -->{{green|−10%|b}} Cavalry cost
+----
+[[File:tolerance own.png|28px]]''' Monastic Duty'''
+: {{green|+1|b}} Tolerance of the true faith
+:<!-- {{icon|development cost|28px}} -->{{DLC-only|Development cost|−10|b}}
+----
+[[File:Manpower_in_true_faith_provinces.png|28px]]''' For the Glory of God'''
+: {{green|+25%|b}} Manpower in True Faith provinces
+----
+[[File:diplomatic reputation.png|28px]]''' Holy Orders'''
+: {{green|+1|b}} Diplomatic reputation
+:<!-- {{icon|improve relations|28px}} -->{{green|+15%|b}} Improve relations
+----
+[[File:infantry power.png|28px]]''' Herders of the Flock'''
+: {{green|+5%|b}} Infantry combat ability
+:<!-- {{icon|infantry cost|28px}} -->{{green|−10%|b}} Infantry cost
+----
+[[File:Prestige_per_development_from_missionary.png|28px]]''' Lingua Religione'''
+: {{green|+0.25|b}} Prestige per development from missionary
+----
+[[File:Reinforce_cost.png|28px]]''' Offer Absolutism'''
+: {{green|-10%|b}} Reinforce cost
+:<!-- {{icon|manpower recovery speed|28px}} -->{{green|+10|b}} Manpower recovery speed
+----
+[[File:Idea bonus.png|28px]] '''Bonus:'''
+: {{green|-10%|b}} War score cost vs other religions
+}}
+
+}}
